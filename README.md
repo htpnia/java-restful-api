@@ -16,6 +16,46 @@
 </div>
 <p align="center" >
 Welcome to my <b>RESTful API</b>.</p>
+<h2 align="center">Class Diagram</h2>
+
+```mermaid
+classDiagram
+  class User {
+    -String name
+    -Account account
+    -Feature[] features
+    -Card card
+    -News[] news
+  }
+
+  class Account {
+    -String number
+    -String agency
+    -Number balance
+    -Number limit
+  }
+
+  class Feature {
+    -String icon
+    -String description
+  }
+
+  class Card {
+    -String number
+    -Number limit
+  }
+
+  class News {
+    -String icon
+    -String description
+  }
+
+  User "1" *-- "1" Account
+  User "1" *-- "N" Feature
+  User "1" *-- "1" Card
+  User "1" *-- "N" News
+
+````
 <p align="center">This project was made during <b>Digital Innovation One Java+Angular Bootcamp.</b>
 </p>
 <div align="center">
@@ -40,4 +80,3 @@ Welcome to my <b>RESTful API</b>.</p>
     </td>
   </tr>
 </table>
-
